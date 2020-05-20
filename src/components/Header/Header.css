@@ -1,9 +1,18 @@
 .header {
   padding: 25px 0;
   text-align: center;
-  background: #222;
+  background: #333333;
 }
-.header img {
-  width: 100px;
-  height: 13px;
+.logo-img {
+  width: 80px;
+  height: 55px;
+}
+
+.shred-logo {
+  width: 200px;
+  height: 25px;
+}
+
+.header p {
+  color: #bcc6cc;
 }
