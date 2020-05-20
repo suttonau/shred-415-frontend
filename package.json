@@ -6,6 +6,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "6.8.0",
+    "prettier-eslint": "^9.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"
@@ -17,7 +20,56 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "parser": "babel-eslint",
+    "extends": "airbnb",
+    "plugins": [
+      "react",
+      "jsx-ally",
+      "import"
+    ],
+    "rules": {
+      "max-len": [
+        "error",
+        {
+          "code": 100
+        }
+      ],
+      "no-use-before-define": "off",
+      "comma-dangle": "off",
+      "arrow-parens": "off",
+      "react/jsx-wrap-multilines": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "object-curly-newline": "off",
+      "no-unused-expressions": [
+        "error",
+        {
+          "allowShortCircuit": true
+        }
+      ],
+      "semi": [
+        "error",
+        "never",
+        {
+          "beforeStatementContinuationChars": "never"
+        }
+      ],
+      "no-unused-vars": "warn",
+      "global-require": "off",
+      "no-underscore-dangle": "off",
+      "react/jsx-filename-extension": "off",
+      "react/prefer-stateless-function": "off",
+      "react/prop-types": [
+        "error",
+        {
+          "ignore": [
+            "navigation",
+            "appState"
+          ]
+        }
+      ],
+      "react/no-unescaped-entities": "off",
+      "react/no-unused-prop-types": "warn"
+    }
   },
   "browserslist": {
     "production": [
@@ -30,5 +82,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "2.5.0"
   }
 }
