@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Scbedule extends Component {
+class StaffList extends Component {
   constructor() {
     super();
     this.state = {
@@ -8,7 +8,7 @@ class Scbedule extends Component {
     };
   }
   componentDidMount() {
-    this.addScript();
+    // this.addScript();
   }
 
   addScript() {
@@ -23,13 +23,13 @@ class Scbedule extends Component {
   render() {
     return (
       <healcode-widget
-        data-type="schedules"
+        data-type="staff-lists"
         data-widget-partner="object"
         data-widget-id="b31347573881"
-        data-widget-version="1"
+        data-widget-version="0"
       ></healcode-widget>
     );
   }
 }
 
-export default Scbedule;
+export default StaffList;
